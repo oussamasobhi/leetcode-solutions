@@ -31,12 +31,12 @@ class Solution {
             for(int i=0;i<qlen;i++){
                  TreeNode cur=q.poll();
                 if(cur.left!=null){
-                    System.out.println(cur.left.val);
+                   
                 tmp.add(cur.left.val);
                 q.add(cur.left);
                 }
                  if(cur.right!=null){
-                      System.out.println(cur.right.val);
+                     
                 q.add(cur.right);
                 tmp.add(cur.right.val);
                }

@@ -6,10 +6,9 @@ class Solution {
               map.get(logs[i][0]).add(logs[i][1]);
           }
             else{
-               
-                HashSet<Integer> set=new HashSet<>();
-                set.add(logs[i][1]);
-                map.put(logs[i][0],set);
+                map.put(logs[i][0],new HashSet<Integer>());
+                map.get(logs[i][0]).add(logs[i][1]);
+                
             }
         }
         int[] answers=new int[k];

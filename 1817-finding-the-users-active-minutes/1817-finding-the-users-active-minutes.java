@@ -15,9 +15,9 @@ class Solution {
         }
         int[] answers=new int[k];
         for(Map.Entry m : map.entrySet()){   
-            HashSet<Integer> s=(HashSet<Integer>)m.getValue();
-              System.out.println(s.size());
-            answers[s.size()-1]+=1;    
+        
+            
+            answers[((HashSet<Integer>)m.getValue()).size()-1]+=1;    
    }  
         return answers;
     }

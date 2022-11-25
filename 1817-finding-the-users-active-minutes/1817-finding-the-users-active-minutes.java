@@ -3,11 +3,10 @@ class Solution {
         HashMap<Integer,HashSet<Integer>> map=new HashMap<>();
         for(int i=0;i<logs.length;i++){
           if(map.containsKey(logs[i][0])){
-              HashSet<Integer> set=map.get(logs[i][0]);
-              set.add(logs[i][1]);
-              map.put(logs[i][0],set);
+              map.get(logs[i][0]).add(logs[i][1]);
           }
             else{
+               
                 HashSet<Integer> set=new HashSet<>();
                 set.add(logs[i][1]);
                 map.put(logs[i][0],set);

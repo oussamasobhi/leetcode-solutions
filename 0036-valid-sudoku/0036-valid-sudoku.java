@@ -2,8 +2,7 @@ class Solution {
     public boolean isValidSudoku(char[][] board) {
          int startrow=0;
          int startcol=0;
-         
-       int lenbox=0;
+         int lenbox=0;
         for(int p=0;p<board.length;p=p+3)
         {
             for(int q=0;q<board.length;q=q+3){     
@@ -22,16 +21,13 @@ class Solution {
                 lenbox=0;
                 }
         }
-     
          for(int i=0;i<board.length;i++){
             HashSet<Character> set=new HashSet<>();
             HashSet<Character> set2=new HashSet<>();
              
              int lenrow=0;
              int lencol=0;
-             
-            
-             
+                 
             for(int j=0;j<board.length;j++){
                
                if(board[i][j]!='.'){ 

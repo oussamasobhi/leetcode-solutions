@@ -7,6 +7,7 @@ class Solution {
                 set.add(matrix[i][j]);
                 set2.add(matrix[j][i]);
             }
+            
             if(set2.size()!=matrix.length || set.size()!=matrix.length)
                 return false;
             else

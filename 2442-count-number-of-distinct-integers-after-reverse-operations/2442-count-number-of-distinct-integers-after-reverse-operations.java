@@ -3,20 +3,16 @@ class Solution {
           Set<Integer> set=new HashSet<>();
         for(int i=0;i<nums.length;i++){
             set.add(nums[i]);
-            Queue<Integer> s=new LinkedList<>();
+        //    Queue<Integer> s=new LinkedList<>();
+            int cum=0;
             while(nums[i]>0){
-                s.add(nums[i]%10);
+                cum=nums[i]%10+cum*10;
                 nums[i]=nums[i]/10;
             }
-            int tmp=0;
-            int size=s.size();
-            int in=size-1;
-            while(s.size()>0){
-               tmp+=s.poll()*Math.pow(10,in);
-                in--;
-            }
-            set.add(tmp);
+           
+            set.add(cum);
         }
         return set.size();
     }
+    
 }

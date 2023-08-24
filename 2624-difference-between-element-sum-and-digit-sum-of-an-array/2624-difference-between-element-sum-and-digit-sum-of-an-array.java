@@ -9,10 +9,10 @@ class Solution {
                digit+=nums[i];
                continue;
                }
-            while(nums[i]>=10){
-                int a=nums[i]/(int)Math.pow(10,String.valueOf(nums[i]).length()-1);
-                nums[i]-=a*Math.pow(10,String.valueOf(nums[i]).length()-1);
-                digit+=a;
+            while(nums[i]>0){
+                int rest=nums[i]%10;
+                digit+=rest;
+                nums[i]/=10;
             }
         digit+=nums[i];
         }

@@ -1,7 +1,6 @@
 class Solution {
     public int[][] diagonalSort(int[][] mat) {
-        // store all diagonals
-        List<List<Integer>> arr=new ArrayList<>();
+        // my approach is to not create another array and change the current matix
         int colindex=0;
         int lineindex=mat.length-1;
         while(lineindex>=0 && colindex<mat[0].length){
@@ -17,14 +16,9 @@ class Solution {
         }
         if(lineindex==0) colindex++;
         if(lineindex!=0)lineindex--;
-        
-        arr.add(tmp);
-        }
-        show(arr);
+               
+         }
         return mat;
     }
-    public void show(List<List<Integer>> arr){
-        for(int i=0;i<arr.size();i++)
-          System.out.println(arr.get(i));
-    }
+
 }

@@ -7,8 +7,8 @@ class Solution {
             setA.add(A[i]);
             setB.add(B[i]);
             HashSet<Integer> tmp=new HashSet<>(setA);
-            tmp.addAll(setB);
-            ans[i]=setA.size()+setB.size()-tmp.size();
+            tmp.retainAll(setB);
+            ans[i]=tmp.size();
         }
         return ans;
     }

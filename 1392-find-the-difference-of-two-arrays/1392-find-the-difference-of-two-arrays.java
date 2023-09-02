@@ -3,6 +3,7 @@ class Solution {
         List<List<Integer>> res=new ArrayList<>();
         Set<Integer> arr1=new HashSet<>();
         Set<Integer> arr2=new HashSet<>();
+       
         for(int i=0;i<nums1.length;i++){
             int a=nums1[i];
             if(!IntStream.of(nums2).anyMatch(x -> x==a))

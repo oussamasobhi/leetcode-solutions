@@ -1,17 +1,15 @@
 class Solution {
     public int partitionString(String s) {
         int ans=1;
-        String str="";
+        ArrayList<Character> listy=new ArrayList<>();
         for(int i=0;i<s.length();i++){
-            if(str.contains(s.substring(i,i+1))){
+            if(listy.contains(s.charAt(i))){
                 ans++;
-               str=""+s.charAt(i);
+                listy.clear();
                // str=s.substring(i,i+1);
             }
-            else{
-                str+=""+s.charAt(i);
+            listy.add(s.charAt(i));
                 //str+=s.substring(i,i+1);
-            }
         }
         return ans;
     }

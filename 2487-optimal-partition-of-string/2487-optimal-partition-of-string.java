@@ -5,10 +5,12 @@ class Solution {
         for(int i=0;i<s.length();i++){
             if(str.contains(s.substring(i,i+1))){
                 ans++;
-                str=s.substring(i,i+1);
+               str=""+s.charAt(i);
+               // str=s.substring(i,i+1);
             }
             else{
-                str+=s.substring(i,i+1);
+                str+=""+s.charAt(i);
+                //str+=s.substring(i,i+1);
             }
         }
         return ans;

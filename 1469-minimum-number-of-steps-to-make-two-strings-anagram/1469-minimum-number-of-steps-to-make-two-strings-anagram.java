@@ -1,5 +1,6 @@
 class Solution {
     public int minSteps(String s, String t) {
+        if(s.equals(t)) return 0;
         Map<Character,Integer> map1=new HashMap<>();
         Map<Character,Integer> map2=new HashMap<>();
         for(int i=0;i<s.length();i++){

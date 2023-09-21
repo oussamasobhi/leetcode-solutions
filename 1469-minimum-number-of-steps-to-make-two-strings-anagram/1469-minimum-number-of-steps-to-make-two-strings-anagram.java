@@ -1,29 +1,14 @@
 class Solution {
     public int minSteps(String s, String t) {
-        if(s.equals(t)) return 0;
-        Map<Character,Integer> map1=new HashMap<>();
-        Map<Character,Integer> map2=new HashMap<>();
+        int[] arr=new int[26];
         for(int i=0;i<s.length();i++){
-            if(map1.containsKey(s.charAt(i))){
-                 map1.put(s.charAt(i),map1.get(s.charAt(i))+1);   
-            }
-            else
-                map1.put(s.charAt(i),1);
-            if(map2.containsKey(t.charAt(i))){
-                 map2.put(t.charAt(i),map2.get(t.charAt(i))+1);   
-            }
-            else
-               map2.put(t.charAt(i),1);
+            arr[s.charAt(i)-'a']++;
+            arr[t.charAt(i)-'a']--;
         }
-         int ans=0;
-         for(Map.Entry m:map2.entrySet()){  
-             if(!map1.containsKey(m.getKey()))
-                   ans+=(Integer)m.getValue();
-               else{
-                   if((Integer)m.getValue()>map1.get(m.getKey()))
-                       ans+=(Integer)m.getValue()-map1.get(m.getKey());
-               }
-        }  
-        return ans;
+        int ans=0;
+        for(int i:arr)
+          if(i>0) ans+=i;
+          
+          return ans;
     }
 }

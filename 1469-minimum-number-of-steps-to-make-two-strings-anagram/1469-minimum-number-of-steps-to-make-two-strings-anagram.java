@@ -15,12 +15,10 @@ class Solution {
                map2.put(t.charAt(i),1);
         }
          int ans=0;
-         System.out.println(map2.size());          
          for(Map.Entry m:map2.entrySet()){  
              if(!map1.containsKey(m.getKey()))
                    ans+=(Integer)m.getValue();
                else{
-                  
                    if((Integer)m.getValue()>map1.get(m.getKey()))
                        ans+=(Integer)m.getValue()-map1.get(m.getKey());
                }

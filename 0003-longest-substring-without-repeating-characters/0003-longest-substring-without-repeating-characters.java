@@ -21,7 +21,6 @@ class Solution {
         }
         
     }
-       return ans;
-     //  return (ans<tmp.length())?tmp.length():ans;
+       return ans;  
     }
 }
